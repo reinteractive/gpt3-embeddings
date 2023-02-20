@@ -2,7 +2,7 @@ require 'ruby/openai'
 require 'csv'
 require './cosine_similarity'
 
-client = OpenAI::Client.new(access_token: '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')
+client = OpenAI::Client.new(access_token: '<API_KEY>')
 
 puts "Welcome to the Sterling Parts AI Knowledge Base. How can I help you?"
 question = gets
