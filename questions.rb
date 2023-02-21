@@ -22,10 +22,7 @@ question_embedding = response['data'][0]['embedding']
 similarity_array = []
 
 CSV.foreach("embeddings.csv", headers: true) do |row|
-  # Extract the embedding from the column and parse it back into an Array
   text_embedding = JSON.parse(row['embedding'])
-  
-  # Add the similarity score to the array
   similarity_array << cosine_similarity(question_embedding, text_embedding)
 end
 
