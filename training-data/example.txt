@@ -1,0 +1,5 @@
+This is just training data.
+
+You need to replace this with specific data from your knowledge base.
+
+Each file in this folder should contain similar content and be no more than 2000 words.
