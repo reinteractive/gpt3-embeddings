@@ -4,7 +4,7 @@ require 'csv'
 
 Dotenv.load()
 
-client = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
+openai = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
 
 text_array = []
 embedding_array = []
@@ -15,7 +15,7 @@ Dir.glob("training-data/*.txt") do |file|
 end
 
 text_array.each do |text|
-  response = client.embeddings(
+  response = openai.embeddings(
     parameters: {
       model: "text-embedding-ada-002",
       input: text

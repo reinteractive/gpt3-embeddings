@@ -5,12 +5,12 @@ require 'cosine_similarity'
 
 Dotenv.load()
 
-client = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
+openai = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
 
 puts "Welcome to the Sterling Parts AI Knowledge Base. How can I help you?"
 question = gets
 
-response = client.embeddings(
+response = openai.embeddings(
   parameters: {
     model: "text-embedding-ada-002",
     input: question
@@ -52,7 +52,7 @@ If the users question is not answered by the article you will respond with 'I'm 
 [Question]
 #{question}"
 
-response = client.completions(
+response = openai.completions(
   parameters: {
     model: "text-davinci-003",
     prompt: prompt,
