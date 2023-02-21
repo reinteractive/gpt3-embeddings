@@ -2,7 +2,8 @@
 ## OpenAI Embeddings
 
 This repo is taken from the reinteractive article 
-"Creating an Intelligent Knowledge Base Q&A App with GPT-3 and Ruby"
+[Creating an Intelligent Knowledge Base Q&A App with GPT-3 and Ruby](https://medium.com/@kane.hooper/creating-an-intelligent-knowledge-base-q-a-app-with-gpt-3-and-ruby-646744eb6e4)
+
 
 The purpose of this file is to provide an example of how to use OpenAI embeddings to create 
 a knowledge base Q&A. The technology implements semantic search 
