@@ -1,8 +1,11 @@
+require 'dotenv'
 require 'ruby/openai'
 require 'csv'
-require './cosine_similarity'
+require 'cosine_similarity'
 
-client = OpenAI::Client.new(access_token: '<API_KEY>')
+Dotenv.load()
+
+client = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
 
 puts "Welcome to the Sterling Parts AI Knowledge Base. How can I help you?"
 question = gets

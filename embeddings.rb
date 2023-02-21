@@ -1,7 +1,10 @@
+require 'dotenv'
 require 'ruby/openai'
 require 'csv'
 
-client = OpenAI::Client.new(access_token: '<YOUR_API_KEY>')
+Dotenv.load()
+
+client = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
 
 text_array = []
 embedding_array = []
