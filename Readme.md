@@ -29,6 +29,7 @@ Install the required dependencies.
 
 ```
 gem install ruby-openai
+gem install cosine-similarity
 ```
 
 ## Preparing training data
